@@ -75,9 +75,9 @@ The MCP server connects to plugins running inside IntelliJ. Install them from th
 | Plugin | What It Does | Free Tier | Marketplace |
 |---|---|---|---|
 | [**Terminal Bridge**](https://plugins.jetbrains.com/plugin/30660-terminal-bridge) | List, create, send commands to IDE terminals | List, read, send | [Install](https://plugins.jetbrains.com/plugin/30660-terminal-bridge) |
-| **Run Configuration Bridge** | Execute run/debug configs, track processes | List, run | Install |
-| **Notification Bridge** | Push notifications, progress bars, status widgets | Send notifications, history | Install |
-| **Project Intelligence** | Project context, dependencies, frameworks | Full context snapshot | Install |
+| [**Run Configuration Bridge**](https://plugins.jetbrains.com/plugin/30842-run-configuration-bridge) | Execute run/debug configs, track processes | List, run | [Install](https://plugins.jetbrains.com/plugin/30842-run-configuration-bridge) |
+| **Notification Bridge** | Push notifications, progress bars, status widgets | Send notifications, history | Coming Soon |
+| [**Project Intelligence**](https://plugins.jetbrains.com/plugin/30895-project-intelligence-bridge) | Project context, dependencies, frameworks | Full context snapshot | [Install](https://plugins.jetbrains.com/plugin/30895-project-intelligence-bridge) |
 
 Each plugin runs a lightweight HTTP server on localhost. The MCP server auto-discovers which plugins are running.
 
@@ -448,9 +448,11 @@ src/
 ## Links
 
 - [LLITD on JetBrains Marketplace](https://plugins.jetbrains.com/organization/llitd)
-- [Terminal Bridge Plugin](https://plugins.jetbrains.com/plugin/30660-terminal-bridge)
+- [Terminal Bridge](https://plugins.jetbrains.com/plugin/30660-terminal-bridge)
+- [Run Configuration Bridge](https://plugins.jetbrains.com/plugin/30842-run-configuration-bridge)
+- [Project Intelligence Bridge](https://plugins.jetbrains.com/plugin/30895-project-intelligence-bridge)
 - [Model Context Protocol](https://modelcontextprotocol.io)
-- [Report Issues](https://github.com/llitd/bridge-suite-mcp/issues)
+- [Report Issues](https://github.com/alarinel/bridge-suite-mcp/issues)
 
 ---
 

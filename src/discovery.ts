@@ -26,21 +26,21 @@ export const PLUGINS: PluginConfig[] = [
     name: "Run Configuration Bridge",
     port: parseInt(process.env.RUN_CONFIG_BRIDGE_PORT || "9877"),
     statusPath: "/api/status",
-    marketplaceUrl: "https://plugins.jetbrains.com/plugin/XXXXX-run-configuration-bridge",
+    marketplaceUrl: "https://plugins.jetbrains.com/plugin/30842-run-configuration-bridge",
   },
   {
     id: "notification-bridge",
     name: "Notification Bridge",
     port: parseInt(process.env.NOTIFICATION_BRIDGE_PORT || "9878"),
     statusPath: "/api/status",
-    marketplaceUrl: "https://plugins.jetbrains.com/plugin/XXXXX-notification-bridge",
+    marketplaceUrl: "https://plugins.jetbrains.com/plugin/XXXXX-notification-bridge",  // TODO: update after marketplace publish
   },
   {
     id: "project-intelligence",
     name: "Project Intelligence Bridge",
     port: parseInt(process.env.PROJECT_INTELLIGENCE_PORT || "9885"),
     statusPath: "/api/status",
-    marketplaceUrl: "https://plugins.jetbrains.com/plugin/XXXXX-project-intelligence",
+    marketplaceUrl: "https://plugins.jetbrains.com/plugin/30895-project-intelligence-bridge",
   },
 ];
 
