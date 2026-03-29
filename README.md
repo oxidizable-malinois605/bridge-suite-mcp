@@ -1,5 +1,10 @@
 # Bridge Suite MCP Server
 
+[![npm version](https://img.shields.io/npm/v/@llitd/bridge-suite-mcp.svg)](https://www.npmjs.com/package/@llitd/bridge-suite-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![MCP Compatible](https://img.shields.io/badge/MCP-Compatible-green.svg)](https://modelcontextprotocol.io)
+[![IntelliJ 2025.3+](https://img.shields.io/badge/IntelliJ-2025.3+-orange.svg)](https://www.jetbrains.com/idea/)
+
 **Give AI agents full access to your IntelliJ IDE.**
 
 Bridge Suite is a free, open-source [MCP](https://modelcontextprotocol.io) server that connects AI coding assistants to IntelliJ IDEA through four specialized plugins. Run commands in terminals, trigger builds, push notifications into the IDE, and query project context — all through a single MCP server.

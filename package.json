@@ -27,6 +27,14 @@
   ],
   "author": "LLITD LLC <support@llitd.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alarinel/bridge-suite-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alarinel/bridge-suite-mcp/issues"
+  },
+  "homepage": "https://github.com/alarinel/bridge-suite-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1"
   },
