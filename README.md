@@ -76,7 +76,7 @@ The MCP server connects to plugins running inside IntelliJ. Install them from th
 |---|---|---|---|
 | [**Terminal Bridge**](https://plugins.jetbrains.com/plugin/30660-terminal-bridge) | List, create, send commands to IDE terminals | List, read, send | [Install](https://plugins.jetbrains.com/plugin/30660-terminal-bridge) |
 | [**Run Configuration Bridge**](https://plugins.jetbrains.com/plugin/30842-run-configuration-bridge) | Execute run/debug configs, track processes | List, run | [Install](https://plugins.jetbrains.com/plugin/30842-run-configuration-bridge) |
-| **Notification Bridge** | Push notifications, progress bars, status widgets | Send notifications, history | Coming Soon |
+| [**Notification Bridge**](https://plugins.jetbrains.com/plugin/30984-notification-bridge) | Push notifications, progress bars, status widgets | Send notifications, history | [Install](https://plugins.jetbrains.com/plugin/30984-notification-bridge) |
 | [**Project Intelligence**](https://plugins.jetbrains.com/plugin/30895-project-intelligence-bridge) | Project context, dependencies, frameworks | Full context snapshot | [Install](https://plugins.jetbrains.com/plugin/30895-project-intelligence-bridge) |
 
 Each plugin runs a lightweight HTTP server on localhost. The MCP server auto-discovers which plugins are running.
@@ -313,7 +313,7 @@ When a tool targets a plugin that isn't running, you get a clear message:
 ```json
 {
   "success": false,
-  "error": "Notification Bridge is not running. Install it from JetBrains Marketplace: https://plugins.jetbrains.com/plugin/XXXXX-notification-bridge — then restart IntelliJ IDEA.",
+  "error": "Notification Bridge is not running. Install it from JetBrains Marketplace: https://plugins.jetbrains.com/plugin/30984-notification-bridge — then restart IntelliJ IDEA.",
   "code": "PLUGIN_NOT_AVAILABLE"
 }
 ```
@@ -323,7 +323,7 @@ When a tool requires a paid feature on the free tier:
 ```json
 {
   "success": false,
-  "error": "This feature requires a paid Notification Bridge license. Upgrade at: https://plugins.jetbrains.com/plugin/XXXXX-notification-bridge",
+  "error": "This feature requires a paid Notification Bridge license. Upgrade at: https://plugins.jetbrains.com/plugin/30984-notification-bridge",
   "code": "LICENSE_REQUIRED"
 }
 ```
@@ -450,6 +450,7 @@ src/
 - [LLITD on JetBrains Marketplace](https://plugins.jetbrains.com/organization/llitd)
 - [Terminal Bridge](https://plugins.jetbrains.com/plugin/30660-terminal-bridge)
 - [Run Configuration Bridge](https://plugins.jetbrains.com/plugin/30842-run-configuration-bridge)
+- [Notification Bridge](https://plugins.jetbrains.com/plugin/30984-notification-bridge)
 - [Project Intelligence Bridge](https://plugins.jetbrains.com/plugin/30895-project-intelligence-bridge)
 - [Model Context Protocol](https://modelcontextprotocol.io)
 - [Report Issues](https://github.com/alarinel/bridge-suite-mcp/issues)

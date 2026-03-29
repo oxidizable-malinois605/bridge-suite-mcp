@@ -33,7 +33,7 @@ export const PLUGINS: PluginConfig[] = [
     name: "Notification Bridge",
     port: parseInt(process.env.NOTIFICATION_BRIDGE_PORT || "9878"),
     statusPath: "/api/status",
-    marketplaceUrl: "https://plugins.jetbrains.com/plugin/XXXXX-notification-bridge",  // TODO: update after marketplace publish
+    marketplaceUrl: "https://plugins.jetbrains.com/plugin/30984-notification-bridge",
   },
   {
     id: "project-intelligence",
