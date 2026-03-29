@@ -1,0 +1,37 @@
+{
+  "name": "@llitd/bridge-suite-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for the LLITD Bridge Suite — unified access to IntelliJ IDE via Terminal, Run Config, Notification, and Project Intelligence plugins",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "bridge-suite-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "jetbrains",
+    "intellij",
+    "bridge-suite",
+    "terminal",
+    "notifications",
+    "run-config",
+    "project-intelligence",
+    "claude",
+    "ai-tools"
+  ],
+  "author": "LLITD LLC <support@llitd.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}
