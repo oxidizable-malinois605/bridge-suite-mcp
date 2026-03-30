@@ -1,5 +1,5 @@
 {
-  "name": "@llitd/bridge-suite-mcp",
+  "name": "bridge-suite-mcp",
   "version": "1.0.0",
   "description": "MCP server for the LLITD Bridge Suite — unified access to IntelliJ IDE via Terminal, Run Config, Notification, and Project Intelligence plugins",
   "type": "module",
